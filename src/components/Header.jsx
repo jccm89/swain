@@ -3,6 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Route } from 'wouter';
 import ChampionsPage from '../features/Champions';
+import SummonersPage from '../features/summoners';
 
 
 export default function Header() {
@@ -12,13 +13,15 @@ export default function Header() {
         <Container>
           <Navbar.Brand href="/">Swain</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="/Champions">Campeones</Nav.Link>
+          <Nav.Link href="/summoners">Invocador</Nav.Link>
+          <Nav.Link href="/champions">Campeones</Nav.Link>
+          <Nav.Link href="/summoners">Objetos</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
 
-      <Route path="/Champions" component={ChampionsPage} />
-
+      <Route path="/champions" component={ChampionsPage} />
+      <Route path="/summoners" component={SummonersPage} />
     </>
   );
 }

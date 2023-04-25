@@ -1,9 +1,9 @@
-import Champions from "./components/Champions";
+import ChampionList from "./components/ChampionList";
 
 export default function ChampionsPage() {
   return (
     <>
-      <Champions />
+      <ChampionList />
     </>
   );
 }
