@@ -2,8 +2,8 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Route } from 'wouter';
-import ChampionsPage from '../features/Champions';
-import SummonersPage from '../features/summoners';
+import {ChampionList} from '@/features/champions';
+import {SummonerProfile} from '@/features/summoners';
 
 
 export default function Header() {
@@ -20,8 +20,8 @@ export default function Header() {
         </Container>
       </Navbar>
 
-      <Route path="/champions" component={ChampionsPage} />
-      <Route path="/summoners" component={SummonersPage} />
+      <Route path="/champions" component={ChampionList} />
+      <Route path="/summoners" component={SummonerProfile} />
     </>
   );
 }
