@@ -1,1 +1,1 @@
-export * from './components/ChampionList';
+export * from './components/Champions';

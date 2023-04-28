@@ -1,13 +1,13 @@
 import { useEffect } from "react"
 import { useState } from "react"
 
-export function ChampionList(){
+export function Champions(){
     const [champions, setChampions] = useState([]); //useState es un hook que nos permite crear un estado en un componente funcional
 
     useEffect(() => {   
 
         const fetchData = async () => {
-            const response = await fetch('https://la1.api.riotgames.com/lol/platform/v3/champion-rotations?api_key=RGAPI-c7d38150-2354-472d-a48f-cf7a986528bc');
+            const response = await fetch('https://la1.api.riotgames.com/lol/platform/v3/champion-rotations?api_key=RGAPI-2827c3f5-15aa-40be-8ae3-8502a17c3869');
             const data = await response.json();
 
             if (!ignore) {
