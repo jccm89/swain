@@ -12,7 +12,7 @@ export default function Header() {
     <>
         <Navbar bg="primary" variant="dark" fixed="top">
           <Container>
-            <Navbar.Brand href="/">Carquix</Navbar.Brand>
+            <Navbar.Brand href="/">Swain</Navbar.Brand>
             <Nav className="me-auto">
             <Nav.Link href="/summoners">Invocador</Nav.Link>
             <Nav.Link href="/champions">Campeones</Nav.Link>
