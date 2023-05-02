@@ -5,11 +5,18 @@
     <link rel="icon" type="image/svg+xml" href="/swain/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Swain</title>
-    <script type="module" crossorigin src="/swain/assets/index-34277169.js"></script>
+    <script type="module" crossorigin src="/swain/assets/index-2f82e3f7.js"></script>
     <link rel="stylesheet" href="/swain/assets/index-7e009afe.css">
   </head>
   <body>
     <div id="root"></div>
     
+    <script>
+      // Si la página se carga en GitHub Pages, redirecciona a index.html
+      if (window.location.href.includes("github")) {
+        const pathName = window.location.pathname;
+        window.location.href = `/swain/${pathName}`;
+      }
+    </script>
   </body>
 </html>
