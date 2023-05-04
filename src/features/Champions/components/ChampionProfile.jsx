@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+
 
 export function ChampionProfile({params}) {
   const [champion, setChampion] = useState({});
@@ -37,8 +40,7 @@ export function ChampionProfile({params}) {
   
   return (
     <>
-      <h1>{champion.name}</h1> 
-      <p>{champion.lore}</p>
+      <CardChampion champion={champion}/>
     </>
     
   );
@@ -57,5 +59,20 @@ function ErrorMessage({message}){
     <div className="alert alert-danger" role="alert">
       {message}
     </div>
+  );
+}
+
+function CardChampion({champion}) {
+  return (
+    <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src={`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion.name}_0.jpg`} />
+      <Card.Body>
+        <Card.Title>{champion.name}</Card.Title>
+        <Card.Text>
+          {champion.lore}
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>
   );
 }

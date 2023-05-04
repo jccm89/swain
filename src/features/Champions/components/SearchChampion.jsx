@@ -2,7 +2,7 @@ import Form from "react-bootstrap/Form"
 import Col from "react-bootstrap/Col"
 import { Container } from "react-bootstrap"
 import Row from "react-bootstrap/Row"
-import { ChampionCard } from "./ChampionCard"
+import { ChampionImage } from "./ChampionImage"
 import { useEffect } from "react"
 import { useState } from "react"
 
@@ -42,7 +42,7 @@ export function SearchChampion()
                 {
                     filteredChampions.map(champion => {
                         return(
-                            <ChampionCard champion={champion} key={champion.key}/>
+                            <ChampionImage champion={champion} key={champion.key}/>
                     )})
                 }
             </Row>

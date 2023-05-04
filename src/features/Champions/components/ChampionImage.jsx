@@ -4,7 +4,7 @@ import Image from 'react-bootstrap/Image';
 import { Link } from 'wouter';
 import { useState } from 'react';
 
-export function ChampionCard({champion})
+export function ChampionImage({champion})
 {
     const [hover, setHover] = useState(false);
 
