@@ -18,7 +18,7 @@ export function ChampionCard({champion})
 
     return(
         <Col xs="4" md="1" lg="1">
-            <Link href='/champions/champion-profile' >
+            <Link to={`/champions/profile/${champion.name}`} >
                 <Image src={`http://ddragon.leagueoflegends.com/cdn/13.8.1/img/champion/${champion.image.full}`} 
                     rounded
                     onMouseOver={handleMouseOver} 

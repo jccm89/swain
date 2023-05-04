@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import {Champions} from '@/features/champions';
+import {Champions, ChampionProfile} from '@/features/champions';
 import {Summoner} from '@/features/summoners';
 import {Objects} from '@/features/objects';
 import { Route } from 'wouter';
@@ -26,6 +26,9 @@ export default function Header() {
             <Route path="/summoners" component={Summoner} />
             <Route path="/champions" component={Champions} />
             <Route path="/objects" component={Objects} />
+            <Route path="/champions/profile/:name">
+              {params => <ChampionProfile params={params} />}
+            </Route>
           </div>
         </Switch>
         
